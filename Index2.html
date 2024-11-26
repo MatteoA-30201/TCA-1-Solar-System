@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    Demo by Ildar Sagdejev ( http://twitter.com/tknomad )
+  -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconn+ect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .wrap > h1 {
+      margin: 26px auto;
+    }
+    #showcase {
+      height: 460px;
+
+    }
+
+    #nav {
+      text-align: center;
+    }
+
+    #nav > button {
+      width: 64px;
+      height: 36px;
+      color: #232323;
+      text-align: center;
+      margin: 5px;
+      background: #CFFCFF;
+      border: solid 2px rgba(0, 0, 0, 0.4);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
+    #nav > button:active,
+    #nav > button.down {
+      background: #3EBAC0;
+      border: solid 2px rgba(0, 0, 0, 0.6);
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav id="navbar-background" class="navbar pt-0 fixed-top navbar-expand-md">
+      <div class="topnav container-fluid">
+        <a class="navbar-brand" id="logo" href="index.html">
+          <img src="Photos\NASA-Logo-Large.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container"
+          aria-controls="#navbar-container" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-container">
+          <ul class="navbar-nav">
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              MERCURY
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              VENUS
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              EARTH
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              MARS
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              JUPITER
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              SATURN
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              URANUS
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              NEPTUNE
+              </a>
+            </li>
+            <li class="skeuomorphic-buttons-navbar">
+              <a class="skeuomorphic-buttons heading-size-change">
+              PLUTO
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container-fluid homepage-position div-position" id="Homepage">
+    <div class="row d-flex justify-content-center align-items-center wrap">
+      <div id="nav" class="col-2 d-flex justify-content-center align-items-center noselect">
+        <button class="left">
+          ←
+        </button>
+      </div>
+      <div id="showcase" class="col-8 d-flex justify-content-center align-items-center noselect">
+        <img class="cloud9-item img-fluid" src="Photos/Mercury_in_true_color.jpg">
+        <img class="cloud9-item img-fluid" src="Photos/Venus Nasa image.jpg">
+        <img class="cloud9-item img-fluid" src="Photos/The_Blue_Marble_(remastered).jpg">
+        <img class="cloud9-item img-fluid" src="Photos/1_mars-nasa-gov.jpg">
+        <img class="cloud9-item img-fluid" src="Photos/Jupiter Marble NASA Juno.jpg">
+        <img class="cloud9-item img-fluid" src="Photos/saturn cassini.jpg">
+        <img class="cloud9-item img-fluid" src="Photos/Uranus nasa.jpg">
+        <img class="cloud9-item img-fluid" src="Photos/Neptune.jpg">
+        <img class="cloud9-item img-fluid" src="Photos/color-image-of-pluto-pia20291-1.jpg">
+      </div>
+      <div id="nav" class="col-2 d-flex justify-content-center align-items-center noselect">
+        <button class="right">
+          →
+        </button>
+      </div>
+    </div>
+    <footer>
+      <p id="item-title">&nbsp;</p>
+    </footer>
+  </div>
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/jquery.reflection.js"></script>
+  <script src="js/lib/jquery.cloud9carousel.js"></script>
+  <script>
+    $(function() {
+      var showcase = $("#showcase"), title = $('#item-title')
+
+      showcase.Cloud9Carousel( {
+        yOrigin: 42,
+        yRadius: 48,
+        mirror: {
+          gap: 12,
+          height: 0.2
+        },
+        buttonLeft: $("#nav > .left"),
+        buttonRight: $("#nav > .right"),
+        autoPlay: 1,
+        bringToFront: true,
+        onRendered: rendered,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function rendered( carousel ) {
+        title.text( carousel.nearestItem().element.alt )
+
+        // Fade in based on proximity of the item
+        var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c))
+      }
+
+      //
+      // Simulate physical button click effect
+      //
+      $('#nav > button').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+      $(document).keydown( function( e ) {
+        //
+        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        //
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+            $('#nav > .left').click()
+            break
+
+          /* right arrow */
+          case 39:
+            $('#nav > .right').click()
+        }
+      } )
+    })
+  </script>
+</body>
+</html>

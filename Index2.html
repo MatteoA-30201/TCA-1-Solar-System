@@ -134,15 +134,14 @@
         </button>
       </div>
       <div id="showcase" class="col-8 d-flex align-items-center noselect">
-        <img class="cloud9-item img-fluid" src="Photos/mercury.png" alt="MERCURY">
-        <img class="cloud9-item img-fluid" src="Photos/venus.png" alt="VENUS">
-        <img class="cloud9-item img-fluid" src="Photos/earth.png" alt="EARTH">
-        <img class="cloud9-item img-fluid" src="Photos/mars.png" alt="MARS">
-        <img class="cloud9-item img-fluid" src="Photos/jupiter.png" alt="JUPITER">
-        <img class="cloud9-item img-fluid" src="Photos/saturn.png" alt="SATURN">
-        <img class="cloud9-item img-fluid" src="Photos/uranus.png" alt="URANUS">
-        <img class="cloud9-item img-fluid" src="Photos/neptune.png" alt="NEPTUNE">
-        <img class="cloud9-item img-fluid" src="Photos/pluto.png" alt="PLUTO">
+        <img class="cloud9-item img-fluid" src="Photos/mercury.png" alt="distance MERCURY size">
+        <img class="cloud9-item img-fluid" src="Photos/earth.png" alt="distance EARTH size">
+        <img class="cloud9-item img-fluid" src="Photos/mars.png" alt="distance MARS size">
+        <img class="cloud9-item img-fluid" src="Photos/jupiter.png" alt="distance JUPITER size">
+        <img class="cloud9-item img-fluid" src="Photos/saturn.png" alt="distance SATURN size">
+        <img class="cloud9-item img-fluid" src="Photos/uranus.png" alt="distance URANUS size">
+        <img class="cloud9-item img-fluid" src="Photos/neptune.png" alt="distance NEPTUNE size">
+        <img class="cloud9-item img-fluid" src="Photos/pluto.png" alt="distance PLUTO size">
 
       </div>
       <div id="nav" class="col-2 d-flex justify-content-center align-items-center noselect">
@@ -153,13 +152,13 @@
     </div>
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-4 d-flex justify-content-center align-items-center">
-        <p class="size"></p>
+        <p id="size">Placeholder</p>
       </div>
       <div class="col-4 d-flex justify-content-center align-items-center">
         <p id="item-title">&nbsp;</p>
       </div>
       <div class="col-4 d-flex justify-content-center align-items-center">
-        <p class="distance"></p>
+        <p class="distance">Placeholder</p>
       </div>
     </div>
     
@@ -168,6 +167,9 @@
   <script src="js/lib/jquery.reflection.js"></script>
   <script src="js/lib/jquery.cloud9carousel.js"></script>
   <script>
+    const distanceArray = ["36 million miles", "67 million miles", "93 million miles", "142 million miles", "484 million miles", "886 million miles", "1.8 billion miles", "2.8 billion miles", "3.6 billion miles"];
+    const sizeArray = ["a radius of 1,516 miles", "the diameter at its equator is about 7,521 miles", "equatorial diameter of 7926 miles", "a radius of 2,106 miles", "a radius of 43,440.7 miles", "equatorial diameter of about 74,897 miles", "equatorial diameter of 31,763 miles", "equatorial diameter of 30,775 miles", "equatorial diameter of about 1,477 miles"];
+
     $(function() {
       var showcase = $("#showcase"), title = $('#item-title')
 

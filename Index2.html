@@ -134,14 +134,14 @@
         </button>
       </div>
       <div id="showcase" class="col-8 d-flex align-items-center noselect">
-        <img class="cloud9-item img-fluid" src="Photos/mercury.png" alt="distance MERCURY size">
-        <img class="cloud9-item img-fluid" src="Photos/earth.png" alt="distance EARTH size">
-        <img class="cloud9-item img-fluid" src="Photos/mars.png" alt="distance MARS size">
-        <img class="cloud9-item img-fluid" src="Photos/jupiter.png" alt="distance JUPITER size">
-        <img class="cloud9-item img-fluid" src="Photos/saturn.png" alt="distance SATURN size">
-        <img class="cloud9-item img-fluid" src="Photos/uranus.png" alt="distance URANUS size">
-        <img class="cloud9-item img-fluid" src="Photos/neptune.png" alt="distance NEPTUNE size">
-        <img class="cloud9-item img-fluid" src="Photos/pluto.png" alt="distance PLUTO size">
+        <img class="cloud9-item img-fluid" src="Photos/mercury.png" alt="MERCURY">
+        <img class="cloud9-item img-fluid" src="Photos/earth.png" alt="EARTH">
+        <img class="cloud9-item img-fluid" src="Photos/mars.png" alt="MARS">
+        <img class="cloud9-item img-fluid" src="Photos/jupiter.png" alt="JUPITER">
+        <img class="cloud9-item img-fluid" src="Photos/saturn.png" alt="SATURN">
+        <img class="cloud9-item img-fluid" src="Photos/uranus.png" alt="URANUS">
+        <img class="cloud9-item img-fluid" src="Photos/neptune.png" alt="NEPTUNE">
+        <img class="cloud9-item img-fluid" src="Photos/pluto.png" alt="PLUTO">
 
       </div>
       <div id="nav" class="col-2 d-flex justify-content-center align-items-center noselect">
@@ -150,15 +150,15 @@
         </button>
       </div>
     </div>
-    <div class="row d-flex justify-content-center align-items-center">
+    <div class="cloud9-info row d-flex justify-content-center align-items-center">
       <div class="col-4 d-flex justify-content-center align-items-center">
-        <p id="size">Placeholder</p>
+        <p class="changing-variable" id="size"></p>
       </div>
       <div class="col-4 d-flex justify-content-center align-items-center">
         <p id="item-title">&nbsp;</p>
       </div>
       <div class="col-4 d-flex justify-content-center align-items-center">
-        <p class="distance">Placeholder</p>
+        <p class="changing-variable" id="distance"></p>
       </div>
     </div>
     
@@ -167,14 +167,12 @@
   <script src="js/lib/jquery.reflection.js"></script>
   <script src="js/lib/jquery.cloud9carousel.js"></script>
   <script>
+      const showcaseChildren = $('#showcase').childElementCount;
+      const distanceArray = ["36 million miles", "67 million miles", "93 million miles", "142 million miles", "484 million miles", "886 million miles", "1.8 billion miles", "2.8 billion miles", "3.6 billion miles"];
+      const sizeArray = ["a radius of 1,516 miles", "the diameter at its equator is about 7,521 miles", "equatorial diameter of 7926 miles", "a radius of 2,106 miles", "a radius of 43,440.7 miles", "equatorial diameter of about 74,897 miles", "equatorial diameter of 31,763 miles", "equatorial diameter of 30,775 miles", "equatorial diameter of about 1,477 miles"];
 
-    const distanceArray = ["36 million miles", "67 million miles", "93 million miles", "142 million miles", "484 million miles", "886 million miles", "1.8 billion miles", "2.8 billion miles", "3.6 billion miles"];
-    const sizeArray = ["a radius of 1,516 miles", "the diameter at its equator is about 7,521 miles", "equatorial diameter of 7926 miles", "a radius of 2,106 miles", "a radius of 43,440.7 miles", "equatorial diameter of about 74,897 miles", "equatorial diameter of 31,763 miles", "equatorial diameter of 30,775 miles", "equatorial diameter of about 1,477 miles"];
+      console.log(showcaseChildren);
 
-    $(document).ready(() => {
-
-    });
-  
     $(function() {
       var showcase = $("#showcase"), title = $('#item-title')
 
@@ -199,7 +197,7 @@
 
       function rendered( carousel ) {
         title.text( carousel.nearestItem().element.alt )
-        console.log(carousel.nearestItem().element.alt);
+
         // Fade in based on proximity of the item
         var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
         title.css('opacity', 0.5 + (0.5 * c))

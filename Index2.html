@@ -167,9 +167,14 @@
   <script src="js/lib/jquery.reflection.js"></script>
   <script src="js/lib/jquery.cloud9carousel.js"></script>
   <script>
+
     const distanceArray = ["36 million miles", "67 million miles", "93 million miles", "142 million miles", "484 million miles", "886 million miles", "1.8 billion miles", "2.8 billion miles", "3.6 billion miles"];
     const sizeArray = ["a radius of 1,516 miles", "the diameter at its equator is about 7,521 miles", "equatorial diameter of 7926 miles", "a radius of 2,106 miles", "a radius of 43,440.7 miles", "equatorial diameter of about 74,897 miles", "equatorial diameter of 31,763 miles", "equatorial diameter of 30,775 miles", "equatorial diameter of about 1,477 miles"];
 
+    $(document).ready(() => {
+
+    });
+  
     $(function() {
       var showcase = $("#showcase"), title = $('#item-title')
 
@@ -194,7 +199,7 @@
 
       function rendered( carousel ) {
         title.text( carousel.nearestItem().element.alt )
-
+        console.log(carousel.nearestItem().element.alt);
         // Fade in based on proximity of the item
         var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
         title.css('opacity', 0.5 + (0.5 * c))

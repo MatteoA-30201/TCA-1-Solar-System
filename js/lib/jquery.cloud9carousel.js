@@ -23,6 +23,7 @@
  *     http://plugins.jquery.com/mousewheel/
  */
 
+
 ;(function($) {
   //
   // Detect CSS transform support
@@ -300,6 +301,8 @@
           return false;
         } );
       }
+
+      console.log(options);
 
       if( options.bringToFront ) {
         $container.bind( 'click.cloud9', function( event ) {

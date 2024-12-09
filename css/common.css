@@ -7,14 +7,19 @@
   user-select: none;
 }
 
-#showcase {
-  visibility: hidden;
-}
-
 #showcase img {
   cursor: pointer;
 }
 footer {
   display: block;
   position: relative;
+}
+
+.cloud9-item {
+  filter: blur(2px) brightness(50%);
+  margin-bottom: 500px;
+}
+
+.frontItemClass {
+  filter: blur(0px);
 }
